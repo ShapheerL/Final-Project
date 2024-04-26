@@ -8,16 +8,10 @@ const PostPage = (props,id) => {
     const [postdetails, setPostDetails] = useState(null);
     const params = useParams();
     const [post, setPost] = useState({id: null, title: "", content: "", imageurl: "",likes: 0, comments: []});
-    const [comments, setComments] = useState([]);
-    const [likes, setLikes] = useState(postdetails ? postdetails.likes : 0);
+    
 
     useEffect(() => {
         const fetchPostDetails = async () => {
-            const { data: postData } = await supabase
-                .from('Posts')
-                .select('*')
-                .eq('id', params.id)
-                .single();
     
                 let { data: post, error } = await supabase
                 .from('Posts')
@@ -32,7 +26,7 @@ const PostPage = (props,id) => {
             
             // Set the post details and comments in your component's state
             setPostDetails(post);
-            setComments(post.comments);
+    
         }
     
         fetchPostDetails();

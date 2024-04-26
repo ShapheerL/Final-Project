@@ -6,7 +6,6 @@ import './ReadPosts.css'
 const ReadPosts = ({ searchTerm }) => {
 
     const [posts, setPosts] = useState([]);
-    const [id, setId] = useState(null);
     const [sortByLikes, setSortByLikes] = useState(false);
     const [sortByTime, setSortByTime] = useState(false);
 
@@ -22,7 +21,7 @@ const ReadPosts = ({ searchTerm }) => {
         };
     
         fetchPosts();
-      }, [id]);
+      }, []);
     
       useEffect(() => {
         if (sortByLikes) {
