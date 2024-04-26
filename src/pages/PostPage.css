@@ -1,0 +1,29 @@
+.Details {
+    border: 10px solid rgba(255, 234, 195, 0.788);
+    padding-top: 30px;
+}
+
+.Mainpost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    border: 10px solid rgba(255, 234, 195, 0.788);
+    background-color: rgb(227, 252, 252);
+    color: black;
+}
+
+.Mainpost img {
+    width: 600px;
+    height: 450px;
+}
+
+.Page{
+    background-color: rgb(107, 107, 107);
+}
+
+.comments input{
+    width: 90%;
+}
